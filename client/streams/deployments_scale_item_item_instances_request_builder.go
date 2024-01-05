@@ -9,7 +9,7 @@ import (
 type DeploymentsScaleItemItemInstancesRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// ByCount gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/client.streams.deployments.scale.item.item.instances.item collection
+// ByCount gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/v2/client.streams.deployments.scale.item.item.instances.item collection
 // Deprecated: This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.
 func (m *DeploymentsScaleItemItemInstancesRequestBuilder) ByCount(count string)(*DeploymentsScaleItemItemInstancesWithCountItemRequestBuilder) {
     urlTplParams := make(map[string]string)
@@ -21,7 +21,7 @@ func (m *DeploymentsScaleItemItemInstancesRequestBuilder) ByCount(count string)(
     }
     return NewDeploymentsScaleItemItemInstancesWithCountItemRequestBuilderInternal(urlTplParams, m.BaseRequestBuilder.RequestAdapter)
 }
-// ByCountInteger gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/client.streams.deployments.scale.item.item.instances.item collection
+// ByCountInteger gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/v2/client.streams.deployments.scale.item.item.instances.item collection
 func (m *DeploymentsScaleItemItemInstancesRequestBuilder) ByCountInteger(count int32)(*DeploymentsScaleItemItemInstancesWithCountItemRequestBuilder) {
     urlTplParams := make(map[string]string)
     for idx, item := range m.BaseRequestBuilder.PathParameters {

@@ -4,7 +4,7 @@ import (
     "context"
     i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e "time"
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f "github.com/microsoft/kiota-abstractions-go"
-    iad7d7e09ef436a0a5bba1e03c342f1f06ef5b0695af5e104ba3e19ae9f63d8d8 "github.com/denniskniep/spring-cloud-dataflow-sdk-go/client/models"
+    i8b6ffe7522e002cf9e74a8eb3d04fb7c0d2c7a0fdd4cc92b05c613a4f20949fc "github.com/denniskniep/spring-cloud-dataflow-sdk-go/v2/client/models"
 )
 
 // ThinexecutionsRequestBuilder builds and executes requests for operations under \jobs\thinexecutions
@@ -52,19 +52,19 @@ func NewThinexecutionsRequestBuilder(rawUrl string, requestAdapter i2ae4187f7dae
     urlParams["request-raw-url"] = rawUrl
     return NewThinexecutionsRequestBuilderInternal(urlParams, requestAdapter)
 }
-func (m *ThinexecutionsRequestBuilder) Get(ctx context.Context, requestConfiguration *ThinexecutionsRequestBuilderGetRequestConfiguration)(iad7d7e09ef436a0a5bba1e03c342f1f06ef5b0695af5e104ba3e19ae9f63d8d8.PagedModelJobExecutionThinResourceable, error) {
+func (m *ThinexecutionsRequestBuilder) Get(ctx context.Context, requestConfiguration *ThinexecutionsRequestBuilderGetRequestConfiguration)(i8b6ffe7522e002cf9e74a8eb3d04fb7c0d2c7a0fdd4cc92b05c613a4f20949fc.PagedModelJobExecutionThinResourceable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
         return nil, err
     }
-    res, err := m.BaseRequestBuilder.RequestAdapter.Send(ctx, requestInfo, iad7d7e09ef436a0a5bba1e03c342f1f06ef5b0695af5e104ba3e19ae9f63d8d8.CreatePagedModelJobExecutionThinResourceFromDiscriminatorValue, nil)
+    res, err := m.BaseRequestBuilder.RequestAdapter.Send(ctx, requestInfo, i8b6ffe7522e002cf9e74a8eb3d04fb7c0d2c7a0fdd4cc92b05c613a4f20949fc.CreatePagedModelJobExecutionThinResourceFromDiscriminatorValue, nil)
     if err != nil {
         return nil, err
     }
     if res == nil {
         return nil, nil
     }
-    return res.(iad7d7e09ef436a0a5bba1e03c342f1f06ef5b0695af5e104ba3e19ae9f63d8d8.PagedModelJobExecutionThinResourceable), nil
+    return res.(i8b6ffe7522e002cf9e74a8eb3d04fb7c0d2c7a0fdd4cc92b05c613a4f20949fc.PagedModelJobExecutionThinResourceable), nil
 }
 func (m *ThinexecutionsRequestBuilder) ToGetRequestInformation(ctx context.Context, requestConfiguration *ThinexecutionsRequestBuilderGetRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.GET, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)

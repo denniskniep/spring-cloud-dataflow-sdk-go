@@ -50,7 +50,7 @@ type ItemWithNameItemRequestBuilderPostRequestConfiguration struct {
     // Request query parameters
     QueryParameters *ItemWithNameItemRequestBuilderPostQueryParameters
 }
-// ByVersion gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/client.apps.item.item.item collection
+// ByVersion gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/v2/client.apps.item.item.item collection
 func (m *ItemWithNameItemRequestBuilder) ByVersion(version string)(*ItemItemWithVersionItemRequestBuilder) {
     urlTplParams := make(map[string]string)
     for idx, item := range m.BaseRequestBuilder.PathParameters {

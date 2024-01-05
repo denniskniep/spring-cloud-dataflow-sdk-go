@@ -121,7 +121,7 @@ type AppsRequestBuilderPutRequestConfiguration struct {
     // Request query parameters
     QueryParameters *AppsRequestBuilderPutQueryParameters
 }
-// ByAppId gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/client.runtime.apps.item collection
+// ByAppId gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/v2/client.runtime.apps.item collection
 func (m *AppsRequestBuilder) ByAppId(appId string)(*AppsWithAppItemRequestBuilder) {
     urlTplParams := make(map[string]string)
     for idx, item := range m.BaseRequestBuilder.PathParameters {

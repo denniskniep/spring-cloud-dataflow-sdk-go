@@ -61,7 +61,7 @@ type DefinitionsRequestBuilderPostRequestConfiguration struct {
     // Request query parameters
     QueryParameters *DefinitionsRequestBuilderPostQueryParameters
 }
-// ByName gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/client.tasks.definitions.item collection
+// ByName gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/v2/client.tasks.definitions.item collection
 func (m *DefinitionsRequestBuilder) ByName(name string)(*DefinitionsWithNameItemRequestBuilder) {
     urlTplParams := make(map[string]string)
     for idx, item := range m.BaseRequestBuilder.PathParameters {

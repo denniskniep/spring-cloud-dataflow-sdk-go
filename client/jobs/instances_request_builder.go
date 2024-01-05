@@ -28,7 +28,7 @@ type InstancesRequestBuilderGetRequestConfiguration struct {
     // Request query parameters
     QueryParameters *InstancesRequestBuilderGetQueryParameters
 }
-// ById gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/client.jobs.instances.item collection
+// ById gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/v2/client.jobs.instances.item collection
 // Deprecated: This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.
 func (m *InstancesRequestBuilder) ById(id string)(*InstancesInstancesItemRequestBuilder) {
     urlTplParams := make(map[string]string)
@@ -40,7 +40,7 @@ func (m *InstancesRequestBuilder) ById(id string)(*InstancesInstancesItemRequest
     }
     return NewInstancesInstancesItemRequestBuilderInternal(urlTplParams, m.BaseRequestBuilder.RequestAdapter)
 }
-// ByIdInt64 gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/client.jobs.instances.item collection
+// ByIdInt64 gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/v2/client.jobs.instances.item collection
 func (m *InstancesRequestBuilder) ByIdInt64(id int64)(*InstancesInstancesItemRequestBuilder) {
     urlTplParams := make(map[string]string)
     for idx, item := range m.BaseRequestBuilder.PathParameters {

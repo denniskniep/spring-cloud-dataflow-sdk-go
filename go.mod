@@ -1,4 +1,4 @@
-module github.com/denniskniep/spring-cloud-dataflow-sdk-go
+module github.com/denniskniep/spring-cloud-dataflow-sdk-go/v2
 
 go 1.20
 

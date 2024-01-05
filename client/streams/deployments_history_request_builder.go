@@ -8,7 +8,7 @@ import (
 type DeploymentsHistoryRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// ByName gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/client.streams.deployments.history.item collection
+// ByName gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/v2/client.streams.deployments.history.item collection
 func (m *DeploymentsHistoryRequestBuilder) ByName(name string)(*DeploymentsHistoryWithNameItemRequestBuilder) {
     urlTplParams := make(map[string]string)
     for idx, item := range m.BaseRequestBuilder.PathParameters {

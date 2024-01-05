@@ -27,7 +27,7 @@ type StreamsRequestBuilderGetRequestConfiguration struct {
     // Request query parameters
     QueryParameters *StreamsRequestBuilderGetQueryParameters
 }
-// ByStreamNames gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/client.runtime.streams.item collection
+// ByStreamNames gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/v2/client.runtime.streams.item collection
 func (m *StreamsRequestBuilder) ByStreamNames(streamNames string)(*StreamsWithStreamNamesItemRequestBuilder) {
     urlTplParams := make(map[string]string)
     for idx, item := range m.BaseRequestBuilder.PathParameters {

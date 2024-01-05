@@ -3,7 +3,7 @@ package runtime
 import (
     "context"
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f "github.com/microsoft/kiota-abstractions-go"
-    iad7d7e09ef436a0a5bba1e03c342f1f06ef5b0695af5e104ba3e19ae9f63d8d8 "github.com/denniskniep/spring-cloud-dataflow-sdk-go/client/models"
+    i8b6ffe7522e002cf9e74a8eb3d04fb7c0d2c7a0fdd4cc92b05c613a4f20949fc "github.com/denniskniep/spring-cloud-dataflow-sdk-go/v2/client/models"
 )
 
 // AppsItemInstancesItemActuatorRequestBuilder builds and executes requests for operations under \runtime\apps\{appId}\instances\{instanceId}\actuator
@@ -58,7 +58,7 @@ func (m *AppsItemInstancesItemActuatorRequestBuilder) Get(ctx context.Context, r
     }
     return res.([]byte), nil
 }
-func (m *AppsItemInstancesItemActuatorRequestBuilder) Post(ctx context.Context, body iad7d7e09ef436a0a5bba1e03c342f1f06ef5b0695af5e104ba3e19ae9f63d8d8.ActuatorPostRequestable, requestConfiguration *AppsItemInstancesItemActuatorRequestBuilderPostRequestConfiguration)([]byte, error) {
+func (m *AppsItemInstancesItemActuatorRequestBuilder) Post(ctx context.Context, body i8b6ffe7522e002cf9e74a8eb3d04fb7c0d2c7a0fdd4cc92b05c613a4f20949fc.ActuatorPostRequestable, requestConfiguration *AppsItemInstancesItemActuatorRequestBuilderPostRequestConfiguration)([]byte, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -84,7 +84,7 @@ func (m *AppsItemInstancesItemActuatorRequestBuilder) ToGetRequestInformation(ct
     requestInfo.Headers.TryAdd("Accept", "*/*")
     return requestInfo, nil
 }
-func (m *AppsItemInstancesItemActuatorRequestBuilder) ToPostRequestInformation(ctx context.Context, body iad7d7e09ef436a0a5bba1e03c342f1f06ef5b0695af5e104ba3e19ae9f63d8d8.ActuatorPostRequestable, requestConfiguration *AppsItemInstancesItemActuatorRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *AppsItemInstancesItemActuatorRequestBuilder) ToPostRequestInformation(ctx context.Context, body i8b6ffe7522e002cf9e74a8eb3d04fb7c0d2c7a0fdd4cc92b05c613a4f20949fc.ActuatorPostRequestable, requestConfiguration *AppsItemInstancesItemActuatorRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

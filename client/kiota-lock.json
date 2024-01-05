@@ -4,7 +4,7 @@
   "lockFileVersion": "1.0.0",
   "kiotaVersion": "1.9.1",
   "clientClassName": "DataFlowClient",
-  "clientNamespaceName": "github.com/denniskniep/spring-cloud-dataflow-sdk-go/client",
+  "clientNamespaceName": "github.com/denniskniep/spring-cloud-dataflow-sdk-go/v2/client",
   "language": "Go",
   "usesBackingStore": false,
   "excludeBackwardCompatible": false,

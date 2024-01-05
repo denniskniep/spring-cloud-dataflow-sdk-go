@@ -3,7 +3,7 @@ This is a go SDK for [Spring Cloud DataFlow's](https://spring.io/projects/spring
 
 ## Use
 ```
-go get github.com/denniskniep/spring-cloud-dataflow-sdk-go@v2.11.2
+go get github.com/denniskniep/spring-cloud-dataflow-sdk-go/v2@v2.11.2
 ```
 
 ## (Re-) Generate
@@ -20,7 +20,7 @@ https://learn.microsoft.com/en-us/openapi/kiota/install?tabs=bash#download-binar
 
 4. Run Code generation
 ```
-kiota generate -l go -c DataFlowClient -n github.com/denniskniep/spring-cloud-dataflow-sdk-go/client -d ./dataflow-api.yml -o ./client
+kiota generate -l go -c DataFlowClient -n github.com/denniskniep/spring-cloud-dataflow-sdk-go/v2/client -d ./dataflow-api.yml -o ./client
 ```
 
 5. tidy

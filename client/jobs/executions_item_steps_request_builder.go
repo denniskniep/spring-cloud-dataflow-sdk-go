@@ -28,7 +28,7 @@ type ExecutionsItemStepsRequestBuilderGetRequestConfiguration struct {
     // Request query parameters
     QueryParameters *ExecutionsItemStepsRequestBuilderGetQueryParameters
 }
-// ByStepExecutionId gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/client.jobs.executions.item.steps.item collection
+// ByStepExecutionId gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/v2/client.jobs.executions.item.steps.item collection
 // Deprecated: This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.
 func (m *ExecutionsItemStepsRequestBuilder) ByStepExecutionId(stepExecutionId string)(*ExecutionsItemStepsWithStepExecutionItemRequestBuilder) {
     urlTplParams := make(map[string]string)
@@ -40,7 +40,7 @@ func (m *ExecutionsItemStepsRequestBuilder) ByStepExecutionId(stepExecutionId st
     }
     return NewExecutionsItemStepsWithStepExecutionItemRequestBuilderInternal(urlTplParams, m.BaseRequestBuilder.RequestAdapter)
 }
-// ByStepExecutionIdInt64 gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/client.jobs.executions.item.steps.item collection
+// ByStepExecutionIdInt64 gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/v2/client.jobs.executions.item.steps.item collection
 func (m *ExecutionsItemStepsRequestBuilder) ByStepExecutionIdInt64(stepExecutionId int64)(*ExecutionsItemStepsWithStepExecutionItemRequestBuilder) {
     urlTplParams := make(map[string]string)
     for idx, item := range m.BaseRequestBuilder.PathParameters {

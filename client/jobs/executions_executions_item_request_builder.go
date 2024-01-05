@@ -3,7 +3,7 @@ package jobs
 import (
     "context"
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f "github.com/microsoft/kiota-abstractions-go"
-    iad7d7e09ef436a0a5bba1e03c342f1f06ef5b0695af5e104ba3e19ae9f63d8d8 "github.com/denniskniep/spring-cloud-dataflow-sdk-go/client/models"
+    i8b6ffe7522e002cf9e74a8eb3d04fb7c0d2c7a0fdd4cc92b05c613a4f20949fc "github.com/denniskniep/spring-cloud-dataflow-sdk-go/v2/client/models"
 )
 
 // ExecutionsExecutionsItemRequestBuilder builds and executes requests for operations under \jobs\executions\{executions-id}
@@ -51,19 +51,19 @@ func NewExecutionsExecutionsItemRequestBuilder(rawUrl string, requestAdapter i2a
     urlParams["request-raw-url"] = rawUrl
     return NewExecutionsExecutionsItemRequestBuilderInternal(urlParams, requestAdapter)
 }
-func (m *ExecutionsExecutionsItemRequestBuilder) Get(ctx context.Context, requestConfiguration *ExecutionsExecutionsItemRequestBuilderGetRequestConfiguration)(iad7d7e09ef436a0a5bba1e03c342f1f06ef5b0695af5e104ba3e19ae9f63d8d8.JobExecutionResourceable, error) {
+func (m *ExecutionsExecutionsItemRequestBuilder) Get(ctx context.Context, requestConfiguration *ExecutionsExecutionsItemRequestBuilderGetRequestConfiguration)(i8b6ffe7522e002cf9e74a8eb3d04fb7c0d2c7a0fdd4cc92b05c613a4f20949fc.JobExecutionResourceable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
         return nil, err
     }
-    res, err := m.BaseRequestBuilder.RequestAdapter.Send(ctx, requestInfo, iad7d7e09ef436a0a5bba1e03c342f1f06ef5b0695af5e104ba3e19ae9f63d8d8.CreateJobExecutionResourceFromDiscriminatorValue, nil)
+    res, err := m.BaseRequestBuilder.RequestAdapter.Send(ctx, requestInfo, i8b6ffe7522e002cf9e74a8eb3d04fb7c0d2c7a0fdd4cc92b05c613a4f20949fc.CreateJobExecutionResourceFromDiscriminatorValue, nil)
     if err != nil {
         return nil, err
     }
     if res == nil {
         return nil, nil
     }
-    return res.(iad7d7e09ef436a0a5bba1e03c342f1f06ef5b0695af5e104ba3e19ae9f63d8d8.JobExecutionResourceable), nil
+    return res.(i8b6ffe7522e002cf9e74a8eb3d04fb7c0d2c7a0fdd4cc92b05c613a4f20949fc.JobExecutionResourceable), nil
 }
 func (m *ExecutionsExecutionsItemRequestBuilder) Put(ctx context.Context, requestConfiguration *ExecutionsExecutionsItemRequestBuilderPutRequestConfiguration)([]byte, error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, requestConfiguration);

@@ -66,7 +66,7 @@ type ExecutionsRequestBuilderPostRequestConfiguration struct {
     // Request query parameters
     QueryParameters *ExecutionsRequestBuilderPostQueryParameters
 }
-// ById gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/client.tasks.executions.item collection
+// ById gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/v2/client.tasks.executions.item collection
 // Deprecated: This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.
 func (m *ExecutionsRequestBuilder) ById(id string)(*ExecutionsExecutionsItemRequestBuilder) {
     urlTplParams := make(map[string]string)
@@ -78,7 +78,7 @@ func (m *ExecutionsRequestBuilder) ById(id string)(*ExecutionsExecutionsItemRequ
     }
     return NewExecutionsExecutionsItemRequestBuilderInternal(urlTplParams, m.BaseRequestBuilder.RequestAdapter)
 }
-// ByIdInt64 gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/client.tasks.executions.item collection
+// ByIdInt64 gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/v2/client.tasks.executions.item collection
 func (m *ExecutionsRequestBuilder) ByIdInt64(id int64)(*ExecutionsExecutionsItemRequestBuilder) {
     urlTplParams := make(map[string]string)
     for idx, item := range m.BaseRequestBuilder.PathParameters {

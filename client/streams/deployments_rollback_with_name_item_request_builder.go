@@ -9,7 +9,7 @@ import (
 type DeploymentsRollbackWithNameItemRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// ByVersion gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/client.streams.deployments.rollback.item.item collection
+// ByVersion gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/v2/client.streams.deployments.rollback.item.item collection
 // Deprecated: This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.
 func (m *DeploymentsRollbackWithNameItemRequestBuilder) ByVersion(version string)(*DeploymentsRollbackItemWithVersionItemRequestBuilder) {
     urlTplParams := make(map[string]string)
@@ -21,7 +21,7 @@ func (m *DeploymentsRollbackWithNameItemRequestBuilder) ByVersion(version string
     }
     return NewDeploymentsRollbackItemWithVersionItemRequestBuilderInternal(urlTplParams, m.BaseRequestBuilder.RequestAdapter)
 }
-// ByVersionInteger gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/client.streams.deployments.rollback.item.item collection
+// ByVersionInteger gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/v2/client.streams.deployments.rollback.item.item collection
 func (m *DeploymentsRollbackWithNameItemRequestBuilder) ByVersionInteger(version int32)(*DeploymentsRollbackItemWithVersionItemRequestBuilder) {
     urlTplParams := make(map[string]string)
     for idx, item := range m.BaseRequestBuilder.PathParameters {
