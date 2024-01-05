@@ -3,7 +3,7 @@ This is a go SDK for [Spring Cloud DataFlow's](https://spring.io/projects/spring
 
 ## Use
 ```
-go get github.com/denniskniep/spring-cloud-dataflow-sdk-go/v2@v2.11.2
+go get github.com/denniskniep/spring-cloud-dataflow-sdk-go/v2@v2.11.2-prerelease1
 ```
 
 ## (Re-) Generate
@@ -29,7 +29,13 @@ go mod tidy
 go test ./...
 ```
 
-6. Commit and Push
+6. Commit, Tag and Push
+
+
+7. Make the module available (see [here](https://go.dev/doc/modules/publishing))
+```
+GOPROXY=proxy.golang.org go list -m github.com/denniskniep/spring-cloud-dataflow-sdk-go/v2@<version>
+```
 
 
 ## Other
