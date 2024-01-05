@@ -1,0 +1,32 @@
+{
+  "descriptionHash": "7C02F42D9099ECD6A116D18F4F78676D0A0153413D833C1BD1769935C7604CB1B725DF9EC960300C5F82A6C81FEC49D6D1D994744FE81F58709ADB8CAB1A685A",
+  "descriptionLocation": "../dataflow-api.yml",
+  "lockFileVersion": "1.0.0",
+  "kiotaVersion": "1.9.1",
+  "clientClassName": "DataFlowClient",
+  "clientNamespaceName": "dataflow/client",
+  "language": "Go",
+  "usesBackingStore": false,
+  "excludeBackwardCompatible": false,
+  "includeAdditionalData": true,
+  "serializers": [
+    "Microsoft.Kiota.Serialization.Json.JsonSerializationWriterFactory",
+    "Microsoft.Kiota.Serialization.Text.TextSerializationWriterFactory",
+    "Microsoft.Kiota.Serialization.Form.FormSerializationWriterFactory",
+    "Microsoft.Kiota.Serialization.Multipart.MultipartSerializationWriterFactory"
+  ],
+  "deserializers": [
+    "Microsoft.Kiota.Serialization.Json.JsonParseNodeFactory",
+    "Microsoft.Kiota.Serialization.Text.TextParseNodeFactory",
+    "Microsoft.Kiota.Serialization.Form.FormParseNodeFactory"
+  ],
+  "structuredMimeTypes": [
+    "application/json",
+    "text/plain;q=0.9",
+    "application/x-www-form-urlencoded;q=0.2",
+    "multipart/form-data;q=0.1"
+  ],
+  "includePatterns": [],
+  "excludePatterns": [],
+  "disabledValidationRules": []
+}
