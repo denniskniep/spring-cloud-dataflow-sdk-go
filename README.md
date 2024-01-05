@@ -23,9 +23,10 @@ https://learn.microsoft.com/en-us/openapi/kiota/install?tabs=bash#download-binar
 kiota generate -l go -c DataFlowClient -n github.com/denniskniep/spring-cloud-dataflow-sdk-go/v2/client -d ./dataflow-api.yml -o ./client
 ```
 
-5. tidy
+5. tidy, compile and test
 ```
 go mod tidy
+go test ./...
 ```
 
 6. Commit and Push
