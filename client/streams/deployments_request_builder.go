@@ -16,7 +16,7 @@ type DeploymentsRequestBuilderDeleteRequestConfiguration struct {
     // Request options
     Options []i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestOption
 }
-// ByName gets an item from the dataflow/client.streams.deployments.item collection
+// ByName gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/client.streams.deployments.item collection
 func (m *DeploymentsRequestBuilder) ByName(name string)(*DeploymentsWithNameItemRequestBuilder) {
     urlTplParams := make(map[string]string)
     for idx, item := range m.BaseRequestBuilder.PathParameters {

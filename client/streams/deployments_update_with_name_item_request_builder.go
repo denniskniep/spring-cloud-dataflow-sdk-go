@@ -3,7 +3,7 @@ package streams
 import (
     "context"
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f "github.com/microsoft/kiota-abstractions-go"
-    i320978ecdc392613ad9c6b55a6f9f5639a92533af8a2d757ef66f9a633865c3f "dataflow/client/models"
+    iad7d7e09ef436a0a5bba1e03c342f1f06ef5b0695af5e104ba3e19ae9f63d8d8 "github.com/denniskniep/spring-cloud-dataflow-sdk-go/client/models"
 )
 
 // DeploymentsUpdateWithNameItemRequestBuilder builds and executes requests for operations under \streams\deployments\update\{name}
@@ -30,7 +30,7 @@ func NewDeploymentsUpdateWithNameItemRequestBuilder(rawUrl string, requestAdapte
     urlParams["request-raw-url"] = rawUrl
     return NewDeploymentsUpdateWithNameItemRequestBuilderInternal(urlParams, requestAdapter)
 }
-func (m *DeploymentsUpdateWithNameItemRequestBuilder) Post(ctx context.Context, body i320978ecdc392613ad9c6b55a6f9f5639a92533af8a2d757ef66f9a633865c3f.UpdateStreamRequestable, requestConfiguration *DeploymentsUpdateWithNameItemRequestBuilderPostRequestConfiguration)([]byte, error) {
+func (m *DeploymentsUpdateWithNameItemRequestBuilder) Post(ctx context.Context, body iad7d7e09ef436a0a5bba1e03c342f1f06ef5b0695af5e104ba3e19ae9f63d8d8.UpdateStreamRequestable, requestConfiguration *DeploymentsUpdateWithNameItemRequestBuilderPostRequestConfiguration)([]byte, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -44,7 +44,7 @@ func (m *DeploymentsUpdateWithNameItemRequestBuilder) Post(ctx context.Context, 
     }
     return res.([]byte), nil
 }
-func (m *DeploymentsUpdateWithNameItemRequestBuilder) ToPostRequestInformation(ctx context.Context, body i320978ecdc392613ad9c6b55a6f9f5639a92533af8a2d757ef66f9a633865c3f.UpdateStreamRequestable, requestConfiguration *DeploymentsUpdateWithNameItemRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *DeploymentsUpdateWithNameItemRequestBuilder) ToPostRequestInformation(ctx context.Context, body iad7d7e09ef436a0a5bba1e03c342f1f06ef5b0695af5e104ba3e19ae9f63d8d8.UpdateStreamRequestable, requestConfiguration *DeploymentsUpdateWithNameItemRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

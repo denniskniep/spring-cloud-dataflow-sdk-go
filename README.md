@@ -21,7 +21,7 @@ https://learn.microsoft.com/en-us/openapi/kiota/install?tabs=bash#download-binar
 
 3. Run Code generation
 ```
-kiota generate -l go -c DataFlowClient -n dataflow/client -d ./dataflow-api.yml -o ./client 
+kiota generate -l go -c DataFlowClient -n github.com/denniskniep/spring-cloud-dataflow-sdk-go/client -d ./dataflow-api.yml -o ./client
 ```
 
 ## Other

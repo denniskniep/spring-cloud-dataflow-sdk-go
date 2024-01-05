@@ -2,23 +2,23 @@ package client
 
 import (
     "context"
-    i014b946f8dad9d8ec144a17118dae574626d8a719fe4a60bafd10ff8d19f4b0d "dataflow/client/schema"
-    i0e32efe3c55f6fbaa0a2c9b7455c84521faf0b458182924cffb7b091fae89599 "dataflow/client/security"
     i25911dc319edd61cbac496af7eab5ef20b6069a42515e22ec6a9bc97bf598488 "github.com/microsoft/kiota-serialization-json-go"
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f "github.com/microsoft/kiota-abstractions-go"
-    i437045e3100d51af2c928b60d9de692fea26495060c3dd1a6f60a71445818f82 "dataflow/client/streams"
-    i49a1b207c844bca4071a1dd5ac03d692a2fa71fd85a36b1676e7250cb29adc4d "dataflow/client/tools"
     i4bcdc892e61ac17e2afc10b5e2b536b29f4fd6c1ad30f4a5a68df47495db3347 "github.com/microsoft/kiota-serialization-form-go"
-    i550ab9f0040019acf07a47c09c9b287dc54a668ff63e2fc2e907a3ce87be3103 "dataflow/client/auditrecords"
     i56887720f41ac882814261620b1c8459c4a992a0207af547c4453dd39fabc426 "github.com/microsoft/kiota-serialization-multipart-go"
-    i6c9d14e3ee8ce9e9424f33dec6e18f5747f119b313f3a413998da0997ec704bc "dataflow/client/apps"
-    i6caec42106ad331f292224fa28b6c03fe43751f46903823ba09a19ea6be056cb "dataflow/client/about"
     i7294a22093d408fdca300f11b81a887d89c47b764af06c8b803e2323973fdb83 "github.com/microsoft/kiota-serialization-text-go"
-    i85d984cb264483fb9d50d64a3583cd1bc8972029b831e007633f4b388b7f20be "dataflow/client/tasks"
-    ia3be9830440430a3684c579378118576201942e81e600a785865508b83c68bb9 "dataflow/client/runtime"
-    ib302e7238b92266e421d105fc2f6f5191923e0493caf7fa41886db090b9f5f13 "dataflow/client/completions"
-    ib645fed3c2110ebccf7329f4acd512b5ab8d12233fe3d114862596835d462ad0 "dataflow/client/jobs"
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91 "github.com/microsoft/kiota-abstractions-go/serialization"
+    i34b8e2fd66099266db79b74496d3c3e30853ae055a475f89902b7f096e86f569 "github.com/denniskniep/spring-cloud-dataflow-sdk-go/client/completions"
+    i433d5dac3040ebc08b4bd12b2de02b126d91cadd6980a9aeef355cb63826d2ee "github.com/denniskniep/spring-cloud-dataflow-sdk-go/client/streams"
+    i67934d0263c4586557b7c0ac1f884137bbd3b32ac2b948c626329772767c4319 "github.com/denniskniep/spring-cloud-dataflow-sdk-go/client/about"
+    i7638ff68664772d482f8dc66c218408bc63d9f7cd492c2aac4a4dcd01182a0da "github.com/denniskniep/spring-cloud-dataflow-sdk-go/client/runtime"
+    i768ac0037ddaab39dabfdf36fb1e47c151a3840faaf879f661c819335f83c38f "github.com/denniskniep/spring-cloud-dataflow-sdk-go/client/auditrecords"
+    i866027ee37135123c0585c891ec25e9426e4445edf81f525db97ef95414bccf5 "github.com/denniskniep/spring-cloud-dataflow-sdk-go/client/schema"
+    i8c8b06b621e92b0c16a6e2ba094614a310f4137ec10df70708b307bdcda39dae "github.com/denniskniep/spring-cloud-dataflow-sdk-go/client/apps"
+    i8e01bb5c870c8814a57f4218191f03102cf349429197bc489647fe16cd826967 "github.com/denniskniep/spring-cloud-dataflow-sdk-go/client/security"
+    ic7df6e6b923e174f81f252602787c09e4b873c83caf7076419b134f689cd7ccf "github.com/denniskniep/spring-cloud-dataflow-sdk-go/client/jobs"
+    idb23fff012d069ba3f0f450171203c6db046b80f728a31ff1fb60291a92e225e "github.com/denniskniep/spring-cloud-dataflow-sdk-go/client/tasks"
+    if8eaade36db4af52e4eb64165ed82f1064a844854820a23f730905e404c0aa3a "github.com/denniskniep/spring-cloud-dataflow-sdk-go/client/tools"
 )
 
 // DataFlowClient the main entry point of the SDK, exposes the configuration and the fluent API.
@@ -75,20 +75,20 @@ type DataFlowClientDataFlowClientPutRequestConfiguration struct {
     Options []i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestOption
 }
 // About the about property
-func (m *DataFlowClient) About()(*i6caec42106ad331f292224fa28b6c03fe43751f46903823ba09a19ea6be056cb.AboutRequestBuilder) {
-    return i6caec42106ad331f292224fa28b6c03fe43751f46903823ba09a19ea6be056cb.NewAboutRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
+func (m *DataFlowClient) About()(*i67934d0263c4586557b7c0ac1f884137bbd3b32ac2b948c626329772767c4319.AboutRequestBuilder) {
+    return i67934d0263c4586557b7c0ac1f884137bbd3b32ac2b948c626329772767c4319.NewAboutRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
 }
 // Apps the apps property
-func (m *DataFlowClient) Apps()(*i6c9d14e3ee8ce9e9424f33dec6e18f5747f119b313f3a413998da0997ec704bc.AppsRequestBuilder) {
-    return i6c9d14e3ee8ce9e9424f33dec6e18f5747f119b313f3a413998da0997ec704bc.NewAppsRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
+func (m *DataFlowClient) Apps()(*i8c8b06b621e92b0c16a6e2ba094614a310f4137ec10df70708b307bdcda39dae.AppsRequestBuilder) {
+    return i8c8b06b621e92b0c16a6e2ba094614a310f4137ec10df70708b307bdcda39dae.NewAppsRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
 }
 // AuditRecords the auditRecords property
-func (m *DataFlowClient) AuditRecords()(*i550ab9f0040019acf07a47c09c9b287dc54a668ff63e2fc2e907a3ce87be3103.AuditRecordsRequestBuilder) {
-    return i550ab9f0040019acf07a47c09c9b287dc54a668ff63e2fc2e907a3ce87be3103.NewAuditRecordsRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
+func (m *DataFlowClient) AuditRecords()(*i768ac0037ddaab39dabfdf36fb1e47c151a3840faaf879f661c819335f83c38f.AuditRecordsRequestBuilder) {
+    return i768ac0037ddaab39dabfdf36fb1e47c151a3840faaf879f661c819335f83c38f.NewAuditRecordsRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
 }
 // Completions the completions property
-func (m *DataFlowClient) Completions()(*ib302e7238b92266e421d105fc2f6f5191923e0493caf7fa41886db090b9f5f13.CompletionsRequestBuilder) {
-    return ib302e7238b92266e421d105fc2f6f5191923e0493caf7fa41886db090b9f5f13.NewCompletionsRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
+func (m *DataFlowClient) Completions()(*i34b8e2fd66099266db79b74496d3c3e30853ae055a475f89902b7f096e86f569.CompletionsRequestBuilder) {
+    return i34b8e2fd66099266db79b74496d3c3e30853ae055a475f89902b7f096e86f569.NewCompletionsRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
 }
 // NewDataFlowClient instantiates a new DataFlowClient and sets the default values.
 func NewDataFlowClient(requestAdapter i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestAdapter)(*DataFlowClient) {
@@ -151,8 +151,8 @@ func (m *DataFlowClient) Head(ctx context.Context, requestConfiguration *DataFlo
     return res.([]byte), nil
 }
 // Jobs the jobs property
-func (m *DataFlowClient) Jobs()(*ib645fed3c2110ebccf7329f4acd512b5ab8d12233fe3d114862596835d462ad0.JobsRequestBuilder) {
-    return ib645fed3c2110ebccf7329f4acd512b5ab8d12233fe3d114862596835d462ad0.NewJobsRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
+func (m *DataFlowClient) Jobs()(*ic7df6e6b923e174f81f252602787c09e4b873c83caf7076419b134f689cd7ccf.JobsRequestBuilder) {
+    return ic7df6e6b923e174f81f252602787c09e4b873c83caf7076419b134f689cd7ccf.NewJobsRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
 }
 func (m *DataFlowClient) Options(ctx context.Context, requestConfiguration *DataFlowClientDataFlowClientOptionsRequestConfiguration)([]byte, error) {
     requestInfo, err := m.ToOptionsRequestInformation(ctx, requestConfiguration);
@@ -211,24 +211,24 @@ func (m *DataFlowClient) Put(ctx context.Context, requestConfiguration *DataFlow
     return res.([]byte), nil
 }
 // Runtime the runtime property
-func (m *DataFlowClient) Runtime()(*ia3be9830440430a3684c579378118576201942e81e600a785865508b83c68bb9.RuntimeRequestBuilder) {
-    return ia3be9830440430a3684c579378118576201942e81e600a785865508b83c68bb9.NewRuntimeRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
+func (m *DataFlowClient) Runtime()(*i7638ff68664772d482f8dc66c218408bc63d9f7cd492c2aac4a4dcd01182a0da.RuntimeRequestBuilder) {
+    return i7638ff68664772d482f8dc66c218408bc63d9f7cd492c2aac4a4dcd01182a0da.NewRuntimeRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
 }
 // Schema the schema property
-func (m *DataFlowClient) Schema()(*i014b946f8dad9d8ec144a17118dae574626d8a719fe4a60bafd10ff8d19f4b0d.SchemaRequestBuilder) {
-    return i014b946f8dad9d8ec144a17118dae574626d8a719fe4a60bafd10ff8d19f4b0d.NewSchemaRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
+func (m *DataFlowClient) Schema()(*i866027ee37135123c0585c891ec25e9426e4445edf81f525db97ef95414bccf5.SchemaRequestBuilder) {
+    return i866027ee37135123c0585c891ec25e9426e4445edf81f525db97ef95414bccf5.NewSchemaRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
 }
 // Security the security property
-func (m *DataFlowClient) Security()(*i0e32efe3c55f6fbaa0a2c9b7455c84521faf0b458182924cffb7b091fae89599.SecurityRequestBuilder) {
-    return i0e32efe3c55f6fbaa0a2c9b7455c84521faf0b458182924cffb7b091fae89599.NewSecurityRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
+func (m *DataFlowClient) Security()(*i8e01bb5c870c8814a57f4218191f03102cf349429197bc489647fe16cd826967.SecurityRequestBuilder) {
+    return i8e01bb5c870c8814a57f4218191f03102cf349429197bc489647fe16cd826967.NewSecurityRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
 }
 // Streams the streams property
-func (m *DataFlowClient) Streams()(*i437045e3100d51af2c928b60d9de692fea26495060c3dd1a6f60a71445818f82.StreamsRequestBuilder) {
-    return i437045e3100d51af2c928b60d9de692fea26495060c3dd1a6f60a71445818f82.NewStreamsRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
+func (m *DataFlowClient) Streams()(*i433d5dac3040ebc08b4bd12b2de02b126d91cadd6980a9aeef355cb63826d2ee.StreamsRequestBuilder) {
+    return i433d5dac3040ebc08b4bd12b2de02b126d91cadd6980a9aeef355cb63826d2ee.NewStreamsRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
 }
 // Tasks the tasks property
-func (m *DataFlowClient) Tasks()(*i85d984cb264483fb9d50d64a3583cd1bc8972029b831e007633f4b388b7f20be.TasksRequestBuilder) {
-    return i85d984cb264483fb9d50d64a3583cd1bc8972029b831e007633f4b388b7f20be.NewTasksRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
+func (m *DataFlowClient) Tasks()(*idb23fff012d069ba3f0f450171203c6db046b80f728a31ff1fb60291a92e225e.TasksRequestBuilder) {
+    return idb23fff012d069ba3f0f450171203c6db046b80f728a31ff1fb60291a92e225e.NewTasksRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
 }
 func (m *DataFlowClient) ToDeleteRequestInformation(ctx context.Context, requestConfiguration *DataFlowClientDataFlowClientDeleteRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DELETE, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
@@ -258,8 +258,8 @@ func (m *DataFlowClient) ToHeadRequestInformation(ctx context.Context, requestCo
     return requestInfo, nil
 }
 // Tools the tools property
-func (m *DataFlowClient) Tools()(*i49a1b207c844bca4071a1dd5ac03d692a2fa71fd85a36b1676e7250cb29adc4d.ToolsRequestBuilder) {
-    return i49a1b207c844bca4071a1dd5ac03d692a2fa71fd85a36b1676e7250cb29adc4d.NewToolsRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
+func (m *DataFlowClient) Tools()(*if8eaade36db4af52e4eb64165ed82f1064a844854820a23f730905e404c0aa3a.ToolsRequestBuilder) {
+    return if8eaade36db4af52e4eb64165ed82f1064a844854820a23f730905e404c0aa3a.NewToolsRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
 }
 func (m *DataFlowClient) ToOptionsRequestInformation(ctx context.Context, requestConfiguration *DataFlowClientDataFlowClientOptionsRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.OPTIONS, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)

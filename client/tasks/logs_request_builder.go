@@ -8,7 +8,7 @@ import (
 type LogsRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// ByTaskExternalExecutionId gets an item from the dataflow/client.tasks.logs.item collection
+// ByTaskExternalExecutionId gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/client.tasks.logs.item collection
 func (m *LogsRequestBuilder) ByTaskExternalExecutionId(taskExternalExecutionId string)(*LogsWithTaskExternalExecutionItemRequestBuilder) {
     urlTplParams := make(map[string]string)
     for idx, item := range m.BaseRequestBuilder.PathParameters {

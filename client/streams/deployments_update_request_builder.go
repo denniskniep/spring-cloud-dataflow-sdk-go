@@ -8,7 +8,7 @@ import (
 type DeploymentsUpdateRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// ByName gets an item from the dataflow/client.streams.deployments.update.item collection
+// ByName gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/client.streams.deployments.update.item collection
 func (m *DeploymentsUpdateRequestBuilder) ByName(name string)(*DeploymentsUpdateWithNameItemRequestBuilder) {
     urlTplParams := make(map[string]string)
     for idx, item := range m.BaseRequestBuilder.PathParameters {

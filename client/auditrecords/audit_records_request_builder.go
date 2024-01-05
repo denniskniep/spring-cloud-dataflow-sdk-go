@@ -42,7 +42,7 @@ func (m *AuditRecordsRequestBuilder) AuditActionTypes()(*AuditActionTypesRequest
 func (m *AuditRecordsRequestBuilder) AuditOperationTypes()(*AuditOperationTypesRequestBuilder) {
     return NewAuditOperationTypesRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
 }
-// ById gets an item from the dataflow/client.auditRecords.item collection
+// ById gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/client.auditRecords.item collection
 // Deprecated: This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.
 func (m *AuditRecordsRequestBuilder) ById(id string)(*AuditRecordsItemRequestBuilder) {
     urlTplParams := make(map[string]string)
@@ -54,7 +54,7 @@ func (m *AuditRecordsRequestBuilder) ById(id string)(*AuditRecordsItemRequestBui
     }
     return NewAuditRecordsItemRequestBuilderInternal(urlTplParams, m.BaseRequestBuilder.RequestAdapter)
 }
-// ByIdInt64 gets an item from the dataflow/client.auditRecords.item collection
+// ByIdInt64 gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/client.auditRecords.item collection
 func (m *AuditRecordsRequestBuilder) ByIdInt64(id int64)(*AuditRecordsItemRequestBuilder) {
     urlTplParams := make(map[string]string)
     for idx, item := range m.BaseRequestBuilder.PathParameters {
