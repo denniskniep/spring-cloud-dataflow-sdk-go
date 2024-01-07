@@ -6,6 +6,25 @@ This is a go SDK for [Spring Cloud DataFlow's](https://spring.io/projects/spring
 go get github.com/denniskniep/spring-cloud-dataflow-sdk-go/v2@v2.11.2-prerelease1
 ```
 
+Example
+```
+// API requires no authentication, so use the anonymous
+// authentication provider
+authProvider := auth.AnonymousAuthenticationProvider{}
+
+// Create request adapter using the net/http-based implementation
+adapter, err := http.NewNetHttpRequestAdapter(&authProvider)
+if err != nil {
+    return nil, err
+}
+
+// Create the API client
+client := client.NewDataFlowClient(adapter)
+
+
+result, err := client.Apps().ByType(app.Type).ByName(app.Name).ByVersion(app.Version).Get(ctx, nil)
+```
+
 ## (Re-) Generate
 1. Extract OpenAPI Specification from Spring Cloud DataFlow (`http://localhost:9393/v3/api-docs`) by starting [docker-compose setup](https://dataflow.spring.io/docs/installation/local/docker/#installing-by-using-docker-compose) with following extra environment variables in `data-flow-server`:
 ```
