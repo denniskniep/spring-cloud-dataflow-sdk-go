@@ -66,13 +66,13 @@ type AppsRequestBuilderPostRequestConfiguration struct {
     QueryParameters *AppsRequestBuilderPostQueryParameters
 }
 // ByType gets an item from the github.com/denniskniep/spring-cloud-dataflow-sdk-go/v2/client.apps.item collection
-func (m *AppsRequestBuilder) ByType(appType string)(*WithTypeItemRequestBuilder) {
+func (m *AppsRequestBuilder) ByType(type string)(*WithTypeItemRequestBuilder) {
     urlTplParams := make(map[string]string)
     for idx, item := range m.BaseRequestBuilder.PathParameters {
         urlTplParams[idx] = item
     }
-    if appType != "" {
-        urlTplParams["type"] = appType
+    if type != "" {
+        urlTplParams["type"] = type
     }
     return NewWithTypeItemRequestBuilderInternal(urlTplParams, m.BaseRequestBuilder.RequestAdapter)
 }

@@ -45,6 +45,10 @@ func (m *TasksRequestBuilder) Logs()(*LogsRequestBuilder) {
 func (m *TasksRequestBuilder) Platforms()(*PlatformsRequestBuilder) {
     return NewPlatformsRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
 }
+// Schedules the schedules property
+func (m *TasksRequestBuilder) Schedules()(*SchedulesRequestBuilder) {
+    return NewSchedulesRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
+}
 // Validation the validation property
 func (m *TasksRequestBuilder) Validation()(*ValidationRequestBuilder) {
     return NewValidationRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
